@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Chat Server</title>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div id="container">
+            <div class="title">
+                <h1>Chat Server</h1>
+            </div>
+            <div id="content">
+                <form method="post" action="{{ url_for('hello') }}">
+                  <label> Last Message:  <strong>{{name}}</strong> </label>
+                  <label for="yourname">Please enter a message:</label>
+                  <input type="text" name="yourname" /><br />
+                  <input type="submit" />
+                </form>
+            </div>
+    </body>
+</html>
+ 
