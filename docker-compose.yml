@@ -4,8 +4,14 @@ web:
     - "5000:5000" 
   links:
    - db:db
+dbdata:
+  image: busybox
+  volumes:
+   - /mongodata:/data/db
 db:
   image: mongo
   expose:
     - 27017
   command: --smallfiles
+  volumes_from:
+    - dbdata     
