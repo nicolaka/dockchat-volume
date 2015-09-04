@@ -1,8 +1,15 @@
-Dockchat is a simple Python+Mongo app build to demonstrate building and running Docker containers with docker-compose. It also demonstrates persistent data using a Data Volume Container ( dbdata in teh compose file). 
+Dockchat is a simple Python+Mongo app built to demonstrate persistent data using a Data Volume Container ( dbdata in teh docker-compose.yml file). 
+
+You need Docker Compose to run this app( pip install -U docker-compose)
 
 To run this app, simply run:
 
-docker-compose build 
+dockchat# docker-compose build 
+dockchat# docker-compose up -d
 
-docker-compose up -d
+By default, this app will run on TCP port 5000
+
+
+
+
 
